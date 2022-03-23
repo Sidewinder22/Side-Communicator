@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     log_ << FUNC << logger::END;
+    show();
 }
 
 MainWindow::~MainWindow()
@@ -35,6 +36,13 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_action_Quit_triggered()
 {
     log_ << FUNC << logger::END;
-    QApplication::quit();
+    emit quitNotif();
+}
+
+
+void MainWindow::on_action_About_triggered()
+{
+    log_ << FUNC << logger::END;
+    emit aboutNotif();
 }
 

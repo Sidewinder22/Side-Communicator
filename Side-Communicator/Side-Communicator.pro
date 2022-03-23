@@ -12,12 +12,16 @@ SOURCES += \
     application.cpp \
     log/logger.cpp \
     main.cpp \
-    ui/mainwindow.cpp
+    ui/mainwindow.cpp \
+    ui/uimanager.cpp \
+    ui/useractionhandler.cpp
 
 HEADERS += \
     application.h \
     log/logger.h \
-    ui/mainwindow.h
+    ui/mainwindow.h \
+    ui/uimanager.h \
+    ui/useractionhandler.h
 
 FORMS += \
     mainwindow.ui

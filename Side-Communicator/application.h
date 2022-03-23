@@ -2,7 +2,7 @@
 #define APPLICATION_H
 
 #include <QObject>
-#include "ui/mainwindow.h"
+#include "ui/uimanager.h"
 #include "log/logger.h"
 
 class Application : public QObject
@@ -14,7 +14,7 @@ public:
 signals:
 
 private:
-    MainWindow* mainWindow_;
+    UIManager* ui_;
     logger::Logger log_;
 };
 

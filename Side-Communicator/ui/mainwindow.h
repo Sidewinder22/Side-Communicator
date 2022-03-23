@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "log/logger.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,7 +21,10 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_action_Quit_triggered();
+
 private:
     Ui::MainWindow *ui;
+    logger::Logger log_;
 };
 #endif // MAINWINDOW_H

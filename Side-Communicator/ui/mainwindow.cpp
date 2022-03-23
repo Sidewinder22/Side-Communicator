@@ -5,8 +5,11 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , log_("MainWindow")
 {
     ui->setupUi(this);
+
+    log_ << FUNC << logger::END;
 }
 
 MainWindow::~MainWindow()
@@ -17,14 +20,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionExit_triggered()
 {
-    std::cout << "Exit Action" << std::endl;
+    log_ << FUNC << logger::END;
     QApplication::quit();
 }
 
 
 void MainWindow::on_pushButton_clicked()
 {
-    std::cout << "Exit Button" << std::endl;
+    log_ << FUNC << logger::END;
+    QApplication::quit();
+}
+
+
+void MainWindow::on_action_Quit_triggered()
+{
+    log_ << FUNC << logger::END;
     QApplication::quit();
 }
 

@@ -16,12 +16,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+signals:
+    void aboutNotif();
+    void quitNotif();
+
 private slots:
     void on_actionExit_triggered();
-
     void on_pushButton_clicked();
-
     void on_action_Quit_triggered();
+
+    void on_action_About_triggered();
 
 private:
     Ui::MainWindow *ui;

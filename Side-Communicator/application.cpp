@@ -1,12 +1,8 @@
 #include "application.h"
 
 Application::Application()
-    : mainWindow_(new MainWindow)
+    : ui_(new UIManager)
     , log_("Application")
 {
     log_ << FUNC << logger::END;
-
-    std::cout << "log***" << std::endl;
-
-    mainWindow_->show();
 }
